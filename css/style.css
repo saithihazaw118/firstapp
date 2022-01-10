@@ -1,0 +1,439 @@
+@font-face {
+	font-family: font1;
+	src: url("../font/FuzzyBubbles-Bold.ttf"),
+	url("../font/FuzzyBubbles-Regular.ttf");
+}
+
+@font-face {
+	font-family: myfont
+	src: url("../font/OpenSansCondensed-Bold.ttf"),
+	url("../font/OpenSansCondensed-Light.ttf");
+}
+
+body {
+	font-family: font1;
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+	padding: 10px;
+	display: inline-block;
+	border: 1px solid black;
+}
+
+li {
+	list-style: none;
+}
+
+/*about me*/
+.site-text {
+	color: blue;
+	text-transform: uppercase;
+}
+
+.container {
+	padding: 0px 30px;
+	border: 1px solid green;
+}
+
+.title {
+	text-align: center;
+	background: linear-gradient(blue, orange);
+	font-size: 50px;
+	-webkit-background-clip: text;
+	color: transparent;
+	font-family: myfont;
+	text-transform: uppercase;
+	padding: 30px 0px;
+	width: 100%;
+
+	}
+
+
+/*Navbar*/
+
+.navbar {
+	border: 1px solid blue;
+	display: flex;
+	flex-wrap: wrap; 
+	justify-content: space-between;
+	padding: 4px;
+	background-color: #F4E7E7;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	transition: all 0.5 ease-in;
+}
+
+/*.navbar-logo {
+	border: 1px solid green;
+}*/
+
+.navbar-menu {
+	/*border: 1px solid red;*/
+}
+
+.navbar-menu ul li {
+	display: inline-block;
+/*	border: 2px solid gold;*/
+}
+
+.navbar-toggle {
+	display: none;
+}
+
+.navbar-menu ul li:hover {
+	background-color: orange;
+}
+
+/*banner*/
+.banner {
+	height: 450px;
+	background-image: url("../img/undraw_In_the_office_re_jtgc.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0px -160px;
+	position: relative;
+}
+
+.banner-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	/*color: white;*/
+}
+
+/*about*/
+.about {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.about about-img, .about .about-content {
+	width: 50%;
+	padding: 20px;
+}
+
+.about .about-img img {
+	width: 100%;
+	height: 350px;
+	object-fit: cover;
+	object-position: center;
+	border: 3px solid green;
+	box-shadow: 3px 4px 10px;
+	border-radius: 10px;
+}
+
+.about .about-img, .about .about-content {
+	width: 50%;
+	padding: 20px;
+}
+
+.about .about-img img {
+	width: 100%;
+	height: 350px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.about .about-content p, .about .about-content h2 {
+	padding: 10px 0px;
+	text-shadow: 3px 4px 10px;
+	text-align: justify;
+}
+
+p {
+	text-align: justify;	
+}
+
+/*service*/
+.service .service-content ul li::before {
+	content: "\f058";
+	font-family: "Font Awesome 5 Free";
+	display: inline-block;
+}
+
+.service-content .box ul li {
+	border: 1px solid black;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
+
+.service-content .box ul li:hover {
+	transform: scale(1.1);
+	background-color: orange;
+	font-size: 20px;
+}
+
+.service-content {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.service-content .box { width: 23%; margin: 0px 1%; }
+
+.service-progress {
+	background-image: linear-gradient(rgba(223,54,78,0.6), rgba(67,87,99,0.7)),
+	 url(../img/undraw_Late_at_night_re_d3mx.png);
+	/*width: 100%;
+	height: 400px;
+	background-size: cover;
+	background-position: 0px -160px;*/
+	background-attachment: fixed;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	
+}
+
+/*our service*/
+
+.service-progress .service-progress-bar, .service-progress .service-progress-content {
+	width: 50%;
+	padding: 30px;
+}
+ 
+.service-progress-bar progress {
+	width: 100%;
+}
+
+.progress-label {
+	display: block;
+}
+
+.service-content .box .box-img img {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	transition: all 0.2s ease-in-out;
+
+}
+
+.service-content .box .box-img:hover img {
+	transform: scale(1.4);
+}
+
+.service-content .box .box-img {
+	overflow: hidden;
+}
+
+/*project*/
+.project-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.project-content .box {
+	width: 25%;
+	border: 1px solid blue;
+	position: relative;
+	overflow: hidden;
+	border-radius: 30px;
+
+}
+
+.project-content .box img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	object-position: center;
+	transition: all 0.3s ease-in-out;
+
+}
+
+.project-content .box .box-overlay {
+	background-color: rgba(0,0,68,0.3);
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transform: translateX(-100%);
+	transition: all 0.7s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	text-align: center;
+	color: black;
+}
+
+.project-content .box:hover .box-overlay {
+	transform: translateX(0%);
+}
+
+.project-content .box:hover img {
+	transform: scale(1.3);
+
+}
+
+.project-finished {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 30px 0px;
+}
+
+.project-item {
+	text-align: center;
+}
+
+ .project-count {
+	display: block;
+	font-size: 40px;
+}
+
+.project-label {
+	font-size: 14px;
+}
+
+/*contact us*/
+.contact .contact-contact {
+	background-color: black;
+	padding: 20px;
+	color: white;
+}
+
+.contact .contact-contact form {
+	margin: 10px auto;
+	width: 70%;
+}
+
+.contact-contact form .form-control {
+	width: 100%;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.contact .contact-contact form .form-label {
+	display: block;
+	margin-top: 10px;
+}
+
+.contact-contact form .form-control {
+	width: 100%;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.contact-contact form button {
+	padding: 10px;
+	background-color: transparent;
+	border: 2px solid orange;
+	border-radius: 10px;
+	margin-top: 20px;
+	color: white;
+
+}
+
+.footer {
+	display: flex;
+	flex-wrap: flex;
+	border: 1px solid green;
+	padding: 10px 40px; 
+	/*position: absolute;*/
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	background: linear-gradient(rgba(0,2,3,0.5), rgba(0,5,78,0.6));
+}
+
+.footer .footer-footer ul li {
+	display: inline-block;
+
+}
+
+.footer .footer-footer {
+	width: 33%;
+	padding: 50px;
+
+	/*position: relative;*/
+}
+
+#up {
+	width: 50px;
+	height: 50px;
+	background-color: black;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 50px;
+	border: 2px solid green;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	cursor: pointer;
+	color: white;
+	display: none;
+}
+
+
+/*media query*/
+
+@media (max-width: 768px) {
+	.navbar-toggle {
+		display: block;
+	}
+
+	.navbar-menu {
+		width: 100%;
+		display: none;
+	}
+
+	.navbar-menu ul li {
+		display: block;
+		width: 100%
+	}
+
+	.navbar-menu ul li a {
+		text-align: center;
+		display: block;
+	}
+
+	.navbar-toggle:hover + .navbar-menu {
+		display: block;
+	}
+
+	.navbar-menu:hover {
+		display: block;
+	}
+
+	/*about*/
+	.about .about-img, .about .about-content {
+		width: 100%;
+	}
+
+	/*service*/
+	.service-content .box {
+		 width: 48%;
+		 margin: 0px 1%;
+	}
+
+	.service-progress .service-progress-bar, .service-progress .service-progress-content {
+	width: 100%;
+	}
+
+	.project-content .box {
+		width: 48%;
+	}
+
+	.project-finished .project-item {
+		width: 50%;
+	}
+}
